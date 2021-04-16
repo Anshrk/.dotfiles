@@ -1,0 +1,7 @@
+[user]
+	email = anshrk.13@gmail.com
+	name = Anshrk
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
