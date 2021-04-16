@@ -15,6 +15,7 @@ sudo python3 -m pip install --user virtualenv
 # node
 sudo apt install -y nodejs
 sudo apt install -y npm
+sudo npm install -g yarn
 
 # neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable
@@ -29,3 +30,10 @@ sudo apt install -y code
 
 # git
 sudo apt install -y git
+
+# docker
+sudo apt install -y docker.io
+
+# final update and upgrade
+sudo apt update
+sudo apt upgrade
