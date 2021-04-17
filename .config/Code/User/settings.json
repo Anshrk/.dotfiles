@@ -1,0 +1,26 @@
+{
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.git": false,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CVS": false
+    },
+    "search.exclude": {
+        "**/*.code-search": false,
+        "**/bower_components": false,
+        "**/node_modules": false
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "workbench.sideBar.location": "right",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+
+}
