@@ -17,4 +17,12 @@
    </metadata>
   </info>
  </bookmark>
+ <bookmark href="file:///home/ansh/programming/mobile-test">
+  <title>mobile-test</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
 </xbel>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
-<xbel xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" xmlns:kdepriv="http://www.kde.org/kdepriv" dbusName="konsole" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info">
+<xbel xmlns:kdepriv="http://www.kde.org/kdepriv" dbusName="konsole" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info">
  <bookmark href="file:///home/ansh/programming/todo/backend">
   <title>backend</title>
   <info>
@@ -19,6 +19,14 @@
  </bookmark>
  <bookmark href="file:///home/ansh/programming/mobile-test">
   <title>mobile-test</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/anshkashyap">
+  <title>anshkashyap</title>
   <info>
    <metadata owner="http://freedesktop.org">
     <bookmark:icon name=""/>
