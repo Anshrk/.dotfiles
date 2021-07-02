@@ -1,12 +1,29 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 
-" " Plugins for autocomplete
+
+
 " Basic Stuff
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " Install fuzzy finder binary
 Plug 'junegunn/fzf.vim'
+
+" Python plugins
+Plug 'sansyrox/vim-python-virtualenv'
+Plug 'davidhalter/jedi-vim'
+Plug 'nvie/vim-flake8'
+Plug 'vim-syntastic/syntastic'
+
+" git stuff
+Plug 'tpope/vim-fugitive'
+
+" Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" Discord Rich presence because fuck you
+Plug 'andweeb/presence.nvim'
 
 " Brackets completor
 Plug 'jiangmiao/auto-pairs'
@@ -17,6 +34,7 @@ Plug 'tmhedberg/SimpylFold'
 
 " themes and stuff
 Plug 'arcticicestudio/nord-vim'
+Plug 'vim-syntastic/syntastic'
 
 " indentlines and stuff
 Plug 'Yggdroot/indentLine'
@@ -46,6 +64,9 @@ set hidden
 set cmdheight=2
 set updatetime=0
 set shortmess+=c
+
+" Clipboard thing
+set clipboard=unnamedplus
 
 "typescript stuff
 nmap <leader>ac <Plug>(coc-codeaction)
@@ -90,7 +111,7 @@ let g:rainbow_active = 1
 
 " themes and stuff
 colorscheme nord
-set background=dark
+set background=light
 
 
 " Number and stuff
@@ -114,6 +135,7 @@ au BufRead, BufNewFile *.py,*.js,*.html,*.css,match BadWhitespace /\s\+$/
 
 
 " some boring autospacing and shit
+let python_highlight_all=1
 syntax on
 set scrolloff=7
 set encoding=utf-8
@@ -124,3 +146,4 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set fileformat=unix
+
