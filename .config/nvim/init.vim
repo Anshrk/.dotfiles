@@ -12,6 +12,7 @@ Plug 'junegunn/fzf.vim'
 
 " Python plugins
 Plug 'sansyrox/vim-python-virtualenv'
+Plug 'vim-scripts/indentpython.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'nvie/vim-flake8'
 Plug 'vim-syntastic/syntastic'
@@ -57,14 +58,6 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-" deoplete stuff
-set nobackup
-set nowritebackup
-set hidden
-set cmdheight=2
-set updatetime=0
-set shortmess+=c
-
 " Clipboard thing
 set clipboard=unnamedplus
 
@@ -96,7 +89,7 @@ let g:NERDTreeShowHidden=1
 " Use Ctrl-k Ctrl-k to open a sidebar with the list of files
 map <C-k><C-k> :NERDTreeToggle<cr>
 " Use Ctrl-P to open the fuzzy file opener
-nnoremap <C-p> :Files<cr>
+nnoremap <C-m> :Files<cr>
 
 
 " backspace to delete the alst word
@@ -129,21 +122,30 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" encoding or something
+set encoding=utf-8
 
-" remove unnecessary whitespace
-au BufRead, BufNewFile *.py,*.js,*.html,*.css,match BadWhitespace /\s\+$/
+" mouse on
+set mouse=a
+
+" Python setup
+au BufNewFile,BufRead *.py 
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 
 
-" some boring autospacing and shit
 let python_highlight_all=1
 syntax on
-set scrolloff=7
-set encoding=utf-8
-set backspace=indent,eol,start
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-set fileformat=unix
 
+
+
+" Webdev setup
+au BufNewFile,BufRead *.js
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
