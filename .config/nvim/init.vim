@@ -1,60 +1,44 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-
-
-
-" Basic Stuff
+"" Basic Utilities
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " Install fuzzy finder binary
 Plug 'junegunn/fzf.vim'
-
-" Python plugins
-Plug 'sansyrox/vim-python-virtualenv'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'nvie/vim-flake8'
-Plug 'vim-syntastic/syntastic'
-
-" git stuff
-Plug 'tpope/vim-fugitive'
-
-" Markdown Preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-
-" Discord Rich presence because fuck you
-Plug 'andweeb/presence.nvim'
-
-" Brackets completor
-Plug 'jiangmiao/auto-pairs'
-Plug 'luochen1990/rainbow'
-
-" Folding and stuff
-Plug 'tmhedberg/SimpylFold' 
-
-" themes and stuff
+" Nerd Tree
+Plug 'scrooloose/nerdtree'
+" Theme
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-syntastic/syntastic'
 
-" indentlines and stuff
+
+
+"" Discord Rich Presence
+Plug 'andweeb/presence.nvim'
+
+"" better life plugins
+" Brackets
+Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'
+" Folding
+Plug 'tmhedberg/SimpylFold'
+" Indentation
 Plug 'Yggdroot/indentLine'
-Plug 'ryanoasis/vim-devicons'
+Plug 'vim-scripts/indentpython.vim'
 
-" Commenting and stuff
-Plug 'tpope/vim-commentary'
+"" Language server thing
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Html Stuff
+"" HTML Stuff
 Plug 'mattn/emmet-vim'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'tpope/vim-surround'
 
-" default defaults 
-Plug 'tpope/vim-surround'
+"" Python Plugins
+" Plug 'sansyrox/vim-python-virtualenv'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'nvie/vim-flake8'
+" Plug 'vim-syntastic/syntastic'
 
-" AutoComplete and code better
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -70,6 +54,9 @@ nmap <silent>gi <Plug>(coc-implementation)
 nmap <silent>gr <Plug>(coc-references)
 
 
+" Leader = Space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 
 " Basic NERDTree stuff
 " indentLine and stuff
@@ -104,7 +91,7 @@ let g:rainbow_active = 1
 
 " themes and stuff
 colorscheme nord
-set background=light
+set background=dark
 
 
 " Number and stuff
@@ -140,6 +127,7 @@ au BufNewFile,BufRead *.py
 
 
 let python_highlight_all=1
+filetype plugin indent on
 syntax on
 
 
