@@ -53,5 +53,6 @@
 (package! Elcord)
 (package! rjsx-mode)
 (package! tide)
-(package! )
+(package! rust-mode)
+(package! cheat-sh)
 ;; :D

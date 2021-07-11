@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Anshrk"
+      user-mail-address "Anshrk.13@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -33,7 +33,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -58,6 +58,10 @@
 ;;
 ;; ----------------------------
 ;;
+;; Cheat.sh shortcuts
+;; emacs shortcut binding
+(map! :leader
+      :desc "Search selected test in cht.sh" :nv "c h" #'cheat-sh-region)
 ;; Neotree something
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-smart-open t)
@@ -65,5 +69,20 @@
 (setq neo-theme 'icons)
 ;; Jump to opened file
 
-;; Turning on Elcord
+;; Discord on emacs
 (elcord-mode)
+
+;; Rust stuff
+;; C-c C-c to run project
+;; (define-key rust-mode-map (kbd "C-c C-c") 'rust-run)
+;; format on save
+(setq rust-format-on-save t)
+;; Indentation
+(add-hook 'rust-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+
+
+
+
+
+;; relative line numbers

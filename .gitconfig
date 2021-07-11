@@ -5,3 +5,6 @@
 	editor = nvim
 [init]
 	defaultBranch = main
+[github]
+	user = Anshrk
+	oauth-token = 
