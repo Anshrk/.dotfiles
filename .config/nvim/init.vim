@@ -4,13 +4,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " Install fuzzy finder binary
 Plug 'junegunn/fzf.vim'
+Plug 'dracula/vim', { 'as': 'dracula'}
 " Nerd Tree
 Plug 'scrooloose/nerdtree'
 " Theme
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-syntastic/syntastic'
-
-
 
 "" Discord Rich Presence
 Plug 'andweeb/presence.nvim'
@@ -41,6 +40,9 @@ Plug 'tpope/vim-surround'
 
 
 call plug#end()
+
+" Theme
+colorscheme dracula
 
 " Clipboard thing
 set clipboard=unnamedplus
